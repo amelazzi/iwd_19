@@ -12,6 +12,7 @@ const StyledHeader = styled.header`
     position: fixed;
     justify-content: space-between;
     box-shadow: 0 5px 5px -5px #333;
+    z-index: 2;
     * {
         margin: 0;
     }
@@ -96,7 +97,7 @@ const Header = () => (
             </StyledLogo>
             <Link to="/"> Home </Link>
             <Link to="/about"> About </Link>
-            <Link to="/"> Contact us </Link>
+            <Link to="/contact-us"> Contact us </Link>
         </nav>
         <StyledLogIn>
             <LogIn to="/"> Agenda </LogIn>

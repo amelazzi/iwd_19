@@ -6,7 +6,6 @@ import styled from 'styled-components'
 
 import Header from "../components/header"
 import Footer from "../components/footer"
-import GlobalStyles from '../styles/globalStyles'
 
 import "./layout.css"
 
@@ -28,7 +27,6 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <GlobalStyles/>
         <Header siteTitle={data.site.siteMetadata.title} />
         <ChildContainer>
             <main>{children}</main>
