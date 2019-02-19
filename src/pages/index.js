@@ -1,12 +1,37 @@
 import React from "react"
 import { Link } from "gatsby"
-
+import styled from 'styled-components'
 import Layout from "../layout/layout"
 import SEO from "../components/seo"
 
 import Head from "../components/head"
-import LeftSection from "../components/home/leftSection";
-import RightSection from "../components/home/rightSection";
+import LeftSection from "../components/home/leftSection"
+import RightSection from "../components/home/rightSection"
+import Section from '../components/section'
+import Card from '../components/home/card'
+import { dark, blue, darkGreen } from "../styles/Colors";
+
+
+/*----------------------------- Variables --------------------------*/
+
+var SponsorsLogo =[
+    {logo: require("../images/home/google.png")},
+    {logo: require("../images/home/github.png")}
+];
+
+const Sponsors = SponsorsLogo.map((sponsor) =>
+    <Card key={sponsor.logo} picture={sponsor.logo}></Card>
+);
+
+/*----------------------------- Variables --------------------------*/
+
+var PartnersLogo =[
+    {logo: require("../images/home/gdg.png")}
+];
+
+const Partners = PartnersLogo.map((partner) =>
+    <Card key={partner.logo} picture={partner.logo}></Card>
+);
 
 const IndexPage = () => (
 <Layout>
@@ -35,6 +60,9 @@ const IndexPage = () => (
         led by Women in Technology Advocate Natalie Villalobos and a global team of Googlers 
         who are passionate about empowering women in technology through increased visibility, 
         community, and resources."/>
+
+    <Section color={dark} title="Sponsors" args={Sponsors}/>
+    <Section color={darkGreen} title="Partners" args={Partners}/>
 </Layout>
 )
 

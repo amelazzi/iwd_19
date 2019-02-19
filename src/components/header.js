@@ -7,9 +7,11 @@ const StyledHeader = styled.header`
     background: ${dark};
     font-size: 18px;
     width: 100%;
+    margin: 0;
     display: flex;
     position: fixed;
     justify-content: space-between;
+    box-shadow: 0 5px 5px -5px #333;
     * {
         margin: 0;
     }
@@ -93,7 +95,7 @@ const Header = () => (
                 <Link to="/">Blab</Link>
             </StyledLogo>
             <Link to="/"> Home </Link>
-            <Link to="/"> About </Link>
+            <Link to="/about"> About </Link>
             <Link to="/"> Contact us </Link>
         </nav>
         <StyledLogIn>

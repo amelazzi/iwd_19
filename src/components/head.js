@@ -5,14 +5,15 @@ import { blue, dark } from "../styles/Colors";
 
 
 const StyledHead = styled.div`
-    padding : 40px;
+    padding : 0px 40px;
 `;
 
 const HeadContent = styled.div`
     padding: 120px  10px;
     h1{
+        width: 90%;
         color: ${dark};
-        font-size: 96px;
+        font-size: 92px;
         font-weight: bold;
     }
     h2{
@@ -20,6 +21,7 @@ const HeadContent = styled.div`
         font-size: 28pt;
     }
     p{
+        width: 48%;
         color: ${dark};
         padding: 20px 0px 50px 0px;
         font-size: 28px;
