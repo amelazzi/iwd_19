@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { blue, dark } from "../../styles/Colors";
+import { blue, dark } from "../styles/Colors";
 
 
 const StyledHead = styled.div`
@@ -40,14 +40,14 @@ const StyledLink = styled(Link)`
     }
 `;
 
-const Head = () => {
+const Head = ({title, subtitle, text}) => {
     return (
         <StyledHead>
             <HeadContent>
-                <h1> IWD’19 Algiers </h1>
-                <h2> Marsh, 9th 2019 </h2>
-                <p> Higher National School of Computer Science - ESI ex INI - </p>
-                <StyledLink to="/"> Get Started </StyledLink>
+                <h1> {title} </h1>
+                <h2> {subtitle} </h2>
+                <p> {text} </p>
+                <StyledLink to="/"> Apply Now </StyledLink>
             </HeadContent>
         </StyledHead>
     );

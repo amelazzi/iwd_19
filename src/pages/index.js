@@ -4,14 +4,15 @@ import { Link } from "gatsby"
 import Layout from "../layout/layout"
 import SEO from "../components/seo"
 
-import Head from "../components/home/head"
+import Head from "../components/head"
 import LeftSection from "../components/home/leftSection";
 import RightSection from "../components/home/rightSection";
 
 const IndexPage = () => (
 <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <Head/>
+    <Head title="IWD’19 Algiers" subtitle="Marsh, 9th 2019"
+        text="Higher National School of Computer Science - ESI ex INI -"/>
     <RightSection picture={require("../images/home/iwd.png")}
         title="What is International Women Day?"
         text="International Women’s Day (IWD) is marked on March 8th every year. 
