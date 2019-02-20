@@ -8,7 +8,7 @@ const StyledCard = styled.div`
     box-shadow: 5px 5px 5px -5px #333;
     padding: 20px 30px;
     border-radius: 8px;
-    margin: 32px;
+    margin: 1.9rem;
     img{
         width: 100%;
         width: 100%;

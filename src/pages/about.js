@@ -7,29 +7,26 @@ import Layout from "../layout/layout"
 import SEO from "../components/seo"
 
 import Head from "../components/head"
+import Section from '../components/section'
 import MemberCard from '../components/about/memberCard'
 
 const background=require("../images/about/background.png")
 
-const TeamContainer = styled.div`
-    background: ${darkGreen};
-    padding: 48px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-`;
+/*----------------------------- Variables --------------------------*/
 
+var MembersPics =[
+    {picture: require("../images/home/google.png")},
+    {picture: require("../images/home/github.png")},
+    {picture: require("../images/home/gdg.png")},
+    {picture: require("../images/home/google.png")},
+    {picture: require("../images/home/github.png")},
+    {picture: require("../images/home/gdg.png")},
+];
 
-const StyledH1 = styled.h1`
-    font-size: 72px;
-    color: white;
-`;
+const Members = MembersPics.map((member) =>
+    <MemberCard key={member.picture} picture={member.picture}></MemberCard>
+);
 
-const Sponsors = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-`;
 
 
 const About = () => (
@@ -38,7 +35,7 @@ const About = () => (
     <Head background={background} title="Women Techmakers Algiers" subtitle=""
         text="International Women’s Day (IWD) is marked on March 8th every year. 
         In different regions."/>
-
+    <Section color={darkGreen} title="Our Team" args={Members}/>
 </Layout>
 )
 

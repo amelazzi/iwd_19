@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import { dark } from '../styles/Colors';
 
 
 const StyledSection = styled.div`
     background: ${props=>props.color};
     padding: 4.8rem;
+    margin-top: -0.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,6 +18,7 @@ const StyledSection = styled.div`
 const Content = styled.div`
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
 `;
 
