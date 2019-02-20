@@ -9,8 +9,9 @@ import SEO from "../components/seo"
 import Head from "../components/head"
 import MemberCard from '../components/about/memberCard'
 
+const background=require("../images/about/background.png")
 
-const PartnersContainer = styled.div`
+const TeamContainer = styled.div`
     background: ${darkGreen};
     padding: 48px;
     display: flex;
@@ -34,21 +35,10 @@ const Sponsors = styled.div`
 const About = () => (
 <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <Head title="Women Techmakers Algiers" subtitle=""
+    <Head background={background} title="Women Techmakers Algiers" subtitle=""
         text="International Women’s Day (IWD) is marked on March 8th every year. 
-        In different regions, the focus of celebrations ranges from general respect 
-        and appreciation for women to a celebration of women’s economic, political, 
-        and social achievements."/>
+        In different regions."/>
 
-    <PartnersContainer>
-        <StyledH1> Our Team </StyledH1>
-        <Sponsors>
-            <MemberCard picture={require("../images/home/gdg.png")}/>
-            <MemberCard picture={require("../images/home/gdg.png")}/>
-            <MemberCard picture={require("../images/home/gdg.png")}/>
-            <MemberCard picture={require("../images/home/gdg.png")}/>
-        </Sponsors>
-    </PartnersContainer>
 </Layout>
 )
 

@@ -5,12 +5,12 @@ import { dark } from '../styles/Colors';
 
 const StyledSection = styled.div`
     background: ${props=>props.color};
-    padding: 48px;
+    padding: 4.8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     h1{
-        font-size: 72px;
+        font-size: 7.2rem;
         color: white;
     }
 `;

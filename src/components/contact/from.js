@@ -5,8 +5,11 @@ import { type } from 'os';
 
 
 const FormContainer = styled.div`
-    padding: 48px 56px;
-    padding-right: 200px;
+    margin: 10rem 5rem;
+    padding-right: 20rem;
+    form{
+        width: 100%;
+    }
 `;
 
 
@@ -14,16 +17,19 @@ const InfoContainer = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
 `;
 
 const Input = styled.input`
-    width: 30%;
-    border: 2px solid ${dark};
-    border-radius: 32px;
-    padding: 8px 16px;
-    font-size: 18px;
+    width: 28%;
+    border: 1px solid ${dark};
+    border-radius: 3.2rem;
+    padding: 0.8rem 1.6rem;
+    font-size: 1.8rem;
+    margin: 0rem!important;
+
     ::placeholder{
-        font-size: 16px;
+        font-size: 1.6rem;
     }
     :focus{
         outline: none;
@@ -31,15 +37,15 @@ const Input = styled.input`
 `;
 
 const StyledTextArea = styled.textarea`
-    margin-top: 32px;
-    width: 100%;
-    height: 18rem;
-    border: 2px solid ${dark};
-    border-radius: 32px;
-    padding: 16px 16px;
+    width: 96.4%;
+    margin-top: 3.2rem;
+    height: 24rem;
+    border: 1px solid ${dark};
+    border-radius: 3.2rem;
+    padding: 1.6rem;
     font-size: 18px;
     ::placeholder{
-        font-size: 16px;
+        font-size: 1.6rem;
     }
     :focus{
         outline: none;
@@ -49,11 +55,12 @@ const StyledTextArea = styled.textarea`
 const StyledBtn = styled.input`
     background: ${darkGreen};
     border: none;
-    border-radius: 32px;
-    padding: 8px 32px;
-    font-size: 18px;
+    border-radius: 3.2rem;
+    padding: 0.8rem 3.2rem;
+    font-size: 1.8rem;
     color: white;
-    margin-top: 32px;
+    margin: 0;
+    margin-top: 3.2rem;
     :hover{
         cursor: pointer;
     }

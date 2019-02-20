@@ -1,6 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
-import styled from 'styled-components'
+
 import Layout from "../layout/layout"
 import SEO from "../components/seo"
 
@@ -9,8 +8,9 @@ import LeftSection from "../components/home/leftSection"
 import RightSection from "../components/home/rightSection"
 import Section from '../components/section'
 import Card from '../components/home/card'
-import { dark, blue, darkGreen } from "../styles/Colors";
+import { dark, darkGreen } from "../styles/Colors";
 
+const background=require("../images/home/background.png")
 
 /*----------------------------- Variables --------------------------*/
 
@@ -36,7 +36,7 @@ const Partners = PartnersLogo.map((partner) =>
 const IndexPage = () => (
 <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <Head title="IWD’19 Algiers" subtitle="Marsh, 9th 2019"
+    <Head background={background} title="IWD’19 Algiers" subtitle="Marsh, 9th 2019"
         text="Higher National School of Computer Science - ESI ex INI -"/>
     <RightSection picture={require("../images/home/iwd.png")}
         title="What is International Women Day?"

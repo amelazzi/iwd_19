@@ -5,36 +5,40 @@ import { blue, dark } from "../styles/Colors";
 
 
 const StyledHead = styled.div`
-    padding : 0px 40px;
+    background-image: url(${props=>props.background});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    height: 61vh;
+    padding : 14rem 4rem;
 `;
 
 const HeadContent = styled.div`
-    padding: 120px  10px;
     h1{
-        width: 90%;
-        color: ${dark};
-        font-size: 92px;
+        width: 80%;
+        font-size: 7.5rem;
         font-weight: bold;
     }
     h2{
         color: ${blue};
-        font-size: 28pt;
+        font-size: 2.8rem;
     }
     p{
-        width: 48%;
+        width: 44%;
         color: ${dark};
-        padding: 20px 0px 50px 0px;
-        font-size: 28px;
-        line-height: 1;
+        padding: 2rem 0rem;
+        padding-bottom: 5rem;
+        font-size: 2.6rem;
+        line-height: 1.6;
     }
 `;
 
 const StyledLink = styled(Link)`
-    border-radius: 16px;
-    padding: 20px 40px;
+    border-radius: 1.6rem;
+    padding: 2rem 4rem;
     background: ${blue};
     color: white;
-    font-size: 26px;
+    font-size: 2.6rem;
     text-decoration: none;
     :hover{
         text-decoration: none;
@@ -42,9 +46,9 @@ const StyledLink = styled(Link)`
     }
 `;
 
-const Head = ({title, subtitle, text}) => {
+const Head = ({background, title, subtitle, text}) => {
     return (
-        <StyledHead>
+        <StyledHead background={background}>
             <HeadContent>
                 <h1> {title} </h1>
                 <h2> {subtitle} </h2>

@@ -3,15 +3,14 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
 import styled from 'styled-components'
+import GlobalStyles from '../styles/globalStyles'
 
 import Header from "../components/header"
 import Footer from "../components/footer"
 
-import "./layout.css"
 
 const ChildContainer = styled.div`
     width: 100%;
-    padding-top: 4rem;
 `;
 
 const Layout = ({ children }) => (
@@ -32,6 +31,7 @@ const Layout = ({ children }) => (
             <main>{children}</main>
         </ChildContainer>
         <Footer/>
+        <GlobalStyles/>
       </>
     )}
   />

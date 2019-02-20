@@ -39,9 +39,9 @@ const StyledHeader = styled.header`
                 content: '';
                 display: block;
                 position: absolute;
-                bottom: -4px;
-                left: calc(34px / 2);
-                width: calc(100% - 32px);
+                bottom: -5px;
+                left: calc(3.2rem / 2);
+                width: calc(100% - 3.2rem);
                 height: 5px;
                 background: ${darkBlue};
                 border-radius: 10px;
@@ -100,9 +100,9 @@ const Header = () => (
             <Link to="/contact-us"> Contact us </Link>
         </nav>
         <StyledLogIn>
-            <LogIn to="/"> Agenda </LogIn>
+            <LogIn to="/agenda"> Agenda </LogIn>
             <StyledLink>
-                <SignIn to="/"> Sign up </SignIn>
+                <SignIn to="/sign-up"> Sign up </SignIn>
             </StyledLink>
         </StyledLogIn>
     </StyledHeader>

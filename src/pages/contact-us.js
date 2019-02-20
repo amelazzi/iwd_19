@@ -10,10 +10,13 @@ import SEO from "../components/seo"
 import Head from "../components/head"
 import Form from '../components/contact/from'
 
+const background=require("../images/contact/background.png")
+
+
 const ContactUs = () => (
     <Layout>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-        <Head title="Contact Us" subtitle=""
+        <Head background={background} title="Contact Us" subtitle=""
             text="For any question regarding our event, reach us below"/>
         <Form/>
     </Layout>
