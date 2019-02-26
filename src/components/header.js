@@ -22,7 +22,6 @@ const StyledHeader = styled.header`
         display: flex;
         flex-flow: row nowrap;
         justify-content: start;
-        padding: 25px;
         align-items: center;
     }
 
@@ -51,13 +50,19 @@ const StyledHeader = styled.header`
 `;
 
 const StyledLogo = styled.div`
-    flex: 1;
-    a {
-        font-weight: bolder;
-        font-size: 20px;
-        &:after {
-            display: none !important;
-        }
+    width: 66%;
+    margin: 0;
+    padding: 0;
+`;
+
+const LogoContainer = styled.div`
+    width: 24rem;
+    margin-left: 3.4rem;
+    img{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        object-fit: cover;
     }
 `;
 
@@ -67,25 +72,31 @@ const StyledLogIn = styled.div`
     justify-content: start;
     background: ${darkGreen};
     width: 20.5%;
-    padding: 25px;
+    padding: 2.5rem 2rem;
+    padding-right: 0;
     font-weight: bold;
 `;
 
 const LogIn = styled(Link)`
+    margin-top: 0.7rem;
     :after {
         background: white !important;
+        bottom: -0.2rem  !important;
     }
 `;
 
 const StyledLink = styled.div`
     background: ${dark};
+    padding: 0.6rem 0.2rem;
     border-radius: 8px;
 `;
 
 const SignIn = styled(Link)`
     :after {
-        bottom: -16px !important;
+        bottom: -1.6rem !important;
         background: white !important;
+        width: 9.5rem !important;
+        margin-left: -1.1rem;
     }
 `;
 
@@ -93,7 +104,9 @@ const Header = () => (
     <StyledHeader>
         <nav>
             <StyledLogo>
-                <Link to="/">Blab</Link>
+                <LogoContainer>
+                    <img src={require("../images/iwd.png")} />
+                </LogoContainer>
             </StyledLogo>
             <Link to="/"> Home </Link>
             <Link to="/about"> About </Link>
