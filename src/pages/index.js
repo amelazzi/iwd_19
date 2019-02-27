@@ -10,7 +10,7 @@ import Section from '../components/section'
 import Card from '../components/home/card'
 import { dark, darkGreen } from "../styles/colors";
 
-const background=require("../images/home/background.png")
+const background=require("../images/home/Background.png")
 
 /*----------------------------- Variables --------------------------*/
 
