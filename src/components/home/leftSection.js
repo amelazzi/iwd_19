@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { gray, dark } from '../../styles/Colors';
+import { gray, dark } from '../../styles/colors';
 
 const StyledSection = styled.div`
     background: white; 
@@ -27,7 +27,7 @@ const StyledContent = styled.div`
         margin-top: 80px;
         margin-bottom: 16px;
         color: ${dark};
-        font-size: 45px;
+        font-size: 4.5rem;
         font-weight: bold
     }
     p{  
@@ -35,7 +35,7 @@ const StyledContent = styled.div`
         margin-bottom: 16px;
         margin-left: 8px;
         color: ${gray};
-        font-size: 28px;
+        font-size: 2.4rem;
         line-height: 1.2;
     }
 `;

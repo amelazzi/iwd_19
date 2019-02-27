@@ -1,6 +1,7 @@
 import React from 'react'
+import {Link} from 'gatsby'
 import styled from 'styled-components'
-import { dark } from '../styles/Colors'
+import { dark } from '../styles/colors'
 
 const StyledFooter = styled.div`
     background: ${dark};
@@ -38,7 +39,7 @@ const SocialMedia = styled.div`
     justify-content: flex-start;
 `;
 
-const IconContainer = styled.div`
+const IconContainer = styled(Link)`
     width: 40px;
     height: 40px;
     margin: 0px 4px;
@@ -75,17 +76,14 @@ const Footer = () => {
             </IwdLogo>
             <Content>
                 <SocialMedia>
-                    <IconContainer>
+                    <IconContainer to="/">
                         <img src={require("../images/facebook.png")} />
                     </IconContainer>
-                    <IconContainer>
+                    <IconContainer to="/">
                         <img src={require("../images/twitter.png")} />
                     </IconContainer>
-                    <IconContainer>
+                    <IconContainer to="/">
                         <img src={require("../images/instagram.png")} />
-                    </IconContainer>
-                    <IconContainer>
-                        <img src={require("../images/youtube.png")} />
                     </IconContainer>
                 </SocialMedia>
                 <small> Copyrights &copy; 2019 All rights reserved </small>

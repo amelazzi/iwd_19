@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { gray } from '../styles/Colors';
+import { gray } from '../styles/colors';
 
 
 const StyledBadge = styled.div`

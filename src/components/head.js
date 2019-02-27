@@ -53,7 +53,7 @@ const Head = ({background, title, subtitle, text}) => {
                 <h1> {title} </h1>
                 <h2> {subtitle} </h2>
                 <p> {text} </p>
-                <StyledLink to="/sign-up"> Apply Now </StyledLink>
+                <StyledLink to="/register"> Apply Now </StyledLink>
             </HeadContent>
         </StyledHead>
     );

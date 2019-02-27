@@ -13,6 +13,11 @@ const StyledContent = styled.div`
         text-align: center;
         font-size: 7.2rem;
     }
+    h2{
+        text-align: center;
+        font-size: 4rem;
+        font-weight: 300;
+    }
 `;
 
 

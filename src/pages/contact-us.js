@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from 'styled-components'
 
-import { dark, blue, darkGreen } from "../styles/Colors"
+import { dark, blue, darkGreen } from "../styles/colors"
 
 import Layout from "../layout/layout"
 import SEO from "../components/seo"
@@ -20,7 +20,6 @@ const ContactUs = ({location}) => (
         <Head background={background} title="Contact Us" subtitle=""
             text="For any question regarding our event, reach us below"/>
         <Form/>
-        <Map/>
     </Layout>
 ) 
 

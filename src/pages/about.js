@@ -1,7 +1,7 @@
 import React from "react"
 import styled from 'styled-components'
 
-import { darkGreen } from "../styles/Colors"
+import { darkGreen } from "../styles/colors"
 
 import Layout from "../layout/layout"
 import SEO from "../components/seo"

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import { dark, darkBlue, darkGreen } from '../styles/Colors';
+import { dark, darkBlue, darkGreen } from '../styles/colors';
 
 const StyledHeader = styled.header`
     background: ${dark};
@@ -32,7 +32,7 @@ const StyledHeader = styled.header`
 
     a {
         color: white;
-        padding: 0 2.5rem;
+        padding: 1rem 2.5rem;
         position: relative;
         text-decoration: none;
 
@@ -43,7 +43,7 @@ const StyledHeader = styled.header`
                 content: '';
                 display: block;
                 position: absolute;
-                bottom: -5px;
+                bottom: 2px;
                 left: calc(3.2rem / 2);
                 width: calc(100% - 3.2rem);
                 height: 5px;
@@ -83,16 +83,15 @@ const StyledLogIn = styled.div`
 `;
 
 const LogIn = styled(Link)`
-    margin-top: 0.7rem;
     :after {
         background: white !important;
-        bottom: -0.2rem  !important;
+        bottom: 0.2rem  !important;
     }
 `;
 
 const StyledLink = styled.div`
     background: ${dark};
-    padding: 0.6rem 0.2rem;
+    padding: 1rem 0.2rem;
     border-radius: 8px;
 
     &:hover{
@@ -113,8 +112,6 @@ const StyledLink = styled.div`
     background: white;
     a {
         color:${dark};
-
-        
     }
         
     }
@@ -149,8 +146,8 @@ const Header = ({location}) => {
         </nav>
         <StyledLogIn>
             <LogIn className={location.pathname === "/agenda" && 'active'} to="/agenda"> Agenda </LogIn>
-            <StyledLink className={location.pathname === "/sign-up" && 'highlight'} >
-                <SignIn to="/sign-up"> Register</SignIn>
+            <StyledLink className={location.pathname === "/register" && 'highlight'} >
+                <SignIn to="/register"> Register</SignIn>
             </StyledLink>
         </StyledLogIn>
     </StyledHeader>

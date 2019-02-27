@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { blue, dark } from "../../styles/Colors";
+import { blue, dark } from "../../styles/colors";
 
 const background=require("../../images/signUp/background.png")
 
