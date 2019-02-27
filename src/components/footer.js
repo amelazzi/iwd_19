@@ -39,7 +39,7 @@ const SocialMedia = styled.div`
     justify-content: flex-start;
 `;
 
-const IconContainer = styled(Link)`
+const IconContainer = styled(a)`
     width: 40px;
     height: 40px;
     margin: 0px 4px;
@@ -76,13 +76,13 @@ const Footer = () => {
             </IwdLogo>
             <Content>
                 <SocialMedia>
-                    <IconContainer to="/">
+                    <IconContainer href="https://www.facebook.com/WomenTechmakersAlgiers/">
                         <img src={require("../images/facebook.png")} />
                     </IconContainer>
-                    <IconContainer to="/">
+                    <IconContainer href="https://www.twitter.com/AlgiersWtm">
                         <img src={require("../images/twitter.png")} />
                     </IconContainer>
-                    <IconContainer to="/">
+                    <IconContainer href="https://www.instagram.com/wtm_algiers/">
                         <img src={require("../images/instagram.png")} />
                     </IconContainer>
                 </SocialMedia>
