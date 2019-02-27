@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { fontFamily } from './types'
-import { gray, dark } from './Colors';
+import { gray, dark } from './colors';
 
 
 const GlobalStyle = createGlobalStyle`
