@@ -8,7 +8,7 @@ import Layout from "../layout/layout"
 import SEO from "../components/seo"
 
 import Head from "../components/head"
-import Form from '../components/contact/from'
+import Form from '../components/contact/form'
 import Map from '../components/contact/map'
 
 const background=require("../images/contact/background.png")

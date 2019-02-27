@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { dark, green, darkGreen } from '../../styles/Colors';
+import { dark, green, darkGreen } from '../../styles/colors';
 import { type } from 'os';
 
 
