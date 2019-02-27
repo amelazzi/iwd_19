@@ -14,14 +14,14 @@ import Map from '../components/contact/map'
 const background=require("../images/contact/background.png")
 
 
-const ContactUs = () => (
-    <Layout>
+const ContactUs = ({location}) => (
+    <Layout location={location}>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
         <Head background={background} title="Contact Us" subtitle=""
             text="For any question regarding our event, reach us below"/>
         <Form/>
         <Map/>
     </Layout>
-)
+) 
 
 export default ContactUs

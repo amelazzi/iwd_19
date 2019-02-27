@@ -33,10 +33,10 @@ const Partners = PartnersLogo.map((partner) =>
     <Card key={partner.logo} picture={partner.logo}></Card>
 );
 
-const IndexPage = () => (
-<Layout>
+const IndexPage = ({location}) => (
+<Layout location={location}>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <Head background={background} title="IWD’19 Algiers" subtitle="Marsh, 9th 2019"
+    <Head background={background} title="IWD’19 Algiers" subtitle="March, 9th 2019"
         text="Higher National School of Computer Science - ESI ex INI -"/>
     <RightSection picture={require("../images/home/iwd.png")}
         title="What is International Women Day?"
@@ -61,9 +61,9 @@ const IndexPage = () => (
         who are passionate about empowering women in technology through increased visibility, 
         community, and resources."/>
 
-    <Section color={dark} title="Sponsors" args={Sponsors}/>
+    <Section color={dark} title="Supported By" args={Sponsors}/>
     <Section color={darkGreen} title="Partners" args={Partners}/>
 </Layout>
-)
+) 
 
 export default IndexPage

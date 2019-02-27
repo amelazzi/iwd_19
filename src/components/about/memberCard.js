@@ -2,17 +2,18 @@ import React from 'react'
 import styled from 'styled-components'
 
 const StyledCard = styled.div`
-    width: 200px;
-    height: 225px;
+    width: 22rem;
+    height: 25rem;
     background: white;
     box-shadow: 5px 5px 5px -5px #333;
-    padding: 20px 30px;
+    padding: 0;
     border-radius: 8px;
-    margin: 1.9rem;
+    margin: 1rem;
     img{
         width: 100%;
-        width: 100%;
+        height: 100%;
         object-fit: cover;
+        border-radius: 8px;
     }
 `;
 

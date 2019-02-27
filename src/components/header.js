@@ -5,7 +5,7 @@ import { dark, darkBlue, darkGreen } from '../styles/Colors';
 
 const StyledHeader = styled.header`
     background: ${dark};
-    font-size: 18px;
+    font-size: 1.6rem;
     width: 100%;
     margin: 0;
     display: flex;
@@ -25,9 +25,14 @@ const StyledHeader = styled.header`
         align-items: center;
     }
 
+    .highlight {
+            color: black;
+            background-color: white
+        }
+
     a {
         color: white;
-        padding: 0 20px;
+        padding: 0 2.5rem;
         position: relative;
         text-decoration: none;
 
@@ -72,7 +77,7 @@ const StyledLogIn = styled.div`
     justify-content: start;
     background: ${darkGreen};
     width: 20.5%;
-    padding: 2.5rem 2rem;
+    padding: 1.5rem 2rem;
     padding-right: 0;
     font-weight: bold;
 `;
@@ -89,6 +94,30 @@ const StyledLink = styled.div`
     background: ${dark};
     padding: 0.6rem 0.2rem;
     border-radius: 8px;
+
+    &:hover{
+    background: white;
+    a{
+        color:${dark};
+    }
+
+    }
+
+    a {
+        &::after {
+            background: transparent!important;
+        }
+    }
+
+    &.highlight {
+    background: white;
+    a {
+        color:${dark};
+
+        
+    }
+        
+    }
 `;
 
 const SignIn = styled(Link)`
@@ -99,8 +128,14 @@ const SignIn = styled(Link)`
         margin-left: -1.1rem;
     }
 `;
+/**
+ * const currentLocation = localStorage.getItem('currentLocation')
+const changeLocation = (location) => localStorage.setItem('currentLocation', location)
+ */
 
-const Header = () => (
+const Header = ({location}) => { 
+    console.log('alpha',location.pathname)
+    return (
     <StyledHeader>
         <nav>
             <StyledLogo>
@@ -108,17 +143,17 @@ const Header = () => (
                     <img src={require("../images/iwd.png")} />
                 </LogoContainer>
             </StyledLogo>
-            <Link to="/"> Home </Link>
-            <Link to="/about"> About </Link>
-            <Link to="/contact-us"> Contact us </Link>
+            <Link className={location.pathname === "/" && 'active'} to="/"> Home </Link>
+            <Link className={location.pathname === "/about" && 'active'} to="/about"> About </Link>
+            <Link className={location.pathname === "/contact-us" && 'active'} to="/contact-us"> Contact us </Link>
         </nav>
         <StyledLogIn>
-            <LogIn to="/agenda"> Agenda </LogIn>
-            <StyledLink>
-                <SignIn to="/sign-up"> Sign up </SignIn>
+            <LogIn className={location.pathname === "/agenda" && 'active'} to="/agenda"> Agenda </LogIn>
+            <StyledLink className={location.pathname === "/sign-up" && 'highlight'} >
+                <SignIn to="/sign-up"> Register</SignIn>
             </StyledLink>
         </StyledLogIn>
     </StyledHeader>
-);
+);}
 
 export default Header;

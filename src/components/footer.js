@@ -42,10 +42,18 @@ const IconContainer = styled.div`
     width: 40px;
     height: 40px;
     margin: 0px 4px;
+    cursor: pointer;
     img{
         width: 100%;
         height: 100%;
         object-fit: cover;
+        filter: brightness(1000%) grayscale(20%) brightness(75%);
+    }
+    &:hover {
+
+        img{
+            filter: brightness(1000%);
+        }
     }
 `;
 

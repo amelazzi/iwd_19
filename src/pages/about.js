@@ -12,15 +12,19 @@ import MemberCard from '../components/about/memberCard'
 
 const background=require("../images/about/background.png")
 
+
 /*----------------------------- Variables --------------------------*/
 
 var MembersPics =[
-    {picture: require("../images/home/google.png")},
-    {picture: require("../images/home/github.png")},
-    {picture: require("../images/home/gdg.png")},
-    {picture: require("../images/home/google.png")},
-    {picture: require("../images/home/github.png")},
-    {picture: require("../images/home/gdg.png")},
+    {picture: require("../images/about/team/amine.png")},
+    {picture: require("../images/about/team/manal.png")},
+    {picture: require("../images/about/team/raouf.png")},
+    {picture: require("../images/about/team/abir.png")},
+    {picture: require("../images/about/team/soumia.png")},
+    {picture: require("../images/about/team/ismail.png")},
+    {picture: require("../images/about/team/batoul.png")},
+    {picture: require("../images/about/team/djamal.png")},
+    {picture: require("../images/about/team/masci.png")}
 ];
 
 const Members = MembersPics.map((member) =>
@@ -29,14 +33,14 @@ const Members = MembersPics.map((member) =>
 
 
 
-const About = () => (
-<Layout>
+const About = ({location}) => (
+<Layout location={location}>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <Head background={background} title="Women Techmakers Algiers" subtitle=""
         text="International Women’s Day (IWD) is marked on March 8th every year. 
         In different regions."/>
     <Section color={darkGreen} title="Our Team" args={Members}/>
 </Layout>
-)
-
+) 
+ 
 export default About

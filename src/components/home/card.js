@@ -4,7 +4,6 @@ import styled from 'styled-components'
 const StyledCard = styled.div`
     width: 325px;
     height: 130px;
-    box-shadow: 5px 5px 5px -5px #333;
     padding: 20px 30px;
     border-radius: 8px;
     margin: 32px;
