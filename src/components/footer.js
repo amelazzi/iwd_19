@@ -76,13 +76,13 @@ const Footer = () => {
             </IwdLogo>
             <Content>
                 <SocialMedia>
-                    <IconContainer href="https://www.facebook.com/WomenTechmakersAlgiers/">
+                    <IconContainer target="_black" href="https://www.facebook.com/WomenTechmakersAlgiers/">
                         <img src={require("../images/facebook.png")} />
                     </IconContainer>
-                    <IconContainer href="https://www.twitter.com/AlgiersWtm">
+                    <IconContainer target="_black" href="https://www.twitter.com/AlgiersWtm">
                         <img src={require("../images/twitter.png")} />
                     </IconContainer>
-                    <IconContainer href="https://www.instagram.com/wtm_algiers/">
+                    <IconContainer target="_black" href="https://www.instagram.com/wtm_algiers/">
                         <img src={require("../images/instagram.png")} />
                     </IconContainer>
                 </SocialMedia>
