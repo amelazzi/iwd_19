@@ -39,7 +39,7 @@ const SocialMedia = styled.div`
     justify-content: flex-start;
 `;
 
-const IconContainer = styled(a)`
+const IconContainer = styled.a`
     width: 40px;
     height: 40px;
     margin: 0px 4px;
