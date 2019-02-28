@@ -14,13 +14,13 @@ const FormContainer = styled.div`
 `;
 
 const StyledFrom = styled.div`
-    margin-top: -0.5rem;
+    height: 210rem;
     background-image: url(${FormBackground});
     background-size: contain;
-    background-position: center 25rem;
+    background-position: center 50rem;
     background-repeat: no-repeat;
     iframe{
-        margin-left: calc(50% - 320px);
+        margin-left: 0%;
         margin-top: -20rem;
         margin-bottom: 4rem;
     }
@@ -33,7 +33,7 @@ const Register = ({location}) => (
         <Head /> 
         <FormContainer>
             <StyledFrom >
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe7ax-7YK_dCjxx5vxnvbOmtvpZC1qh6tEQzZf5XHX6Ahz7Lw/viewform?embedded=true" width="640" height="1846" frameborder="0" marginheight="0" marginwidth="0">Chargement en cours...</iframe>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe7ax-7YK_dCjxx5vxnvbOmtvpZC1qh6tEQzZf5XHX6Ahz7Lw/viewform?embedded=true" width="100%" height="2300" frameborder="0" marginheight="0" marginwidth="0">Chargement en cours...</iframe>
             </StyledFrom>
         </FormContainer>
     </Layout>
