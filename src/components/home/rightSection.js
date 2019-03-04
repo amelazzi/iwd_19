@@ -4,12 +4,38 @@ import { gray, dark } from '../../styles/colors';
 
 const StyledSection = styled.div`
     background: white; 
+    padding: 7rem;
+    img{
+        width: 90%;
+        margin-top: -2rem;
+    }
+    h1{
+        width: 50%;
+        margin-top: 2rem;
+        margin-bottom: 1.6rem;
+        margin-left: 50%;
+        color: ${dark};
+        font-size: 4.5rem;
+        font-weight: bold
+    }
+    @media (max-width: 35em) {
+        flex-direction: column;
+        padding: 3rem;
+        h1{
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+`;
+
+const Content = styled.div`
     display: flex;
     flex-direction: row;
-    align-items: center;   
-    padding: 70px;
-    img{
-        width: 100%;
+    align-items: center;
+    margin-top: -12rem;
+    @media (max-width: 35em) {
+        flex-direction: column;
+        margin-top: 0rem;
     }
 `;
 
@@ -17,38 +43,44 @@ const StyledImg = styled.div`
     margin-top: 40px;
     padding: 8px;
     width: 50%;
+    @media (max-width: 35em) {
+        width: 100%;
+    }
 `;
 
 const StyledContent = styled.div`
     width: 50%;
     padding: 16px;
     padding-right: 0;
-    h1{
-        margin-top: 80px;
-        margin-bottom: 16px;
-        color: ${dark};
-        font-size: 4.5rem;
-        font-weight: bold
-    }
     p{  
         width:90%;
         margin-bottom: 16px;
-        margin-left: 8px;
+        margin-left: -1rem;
+        margin-top: 10rem;
         color: ${gray};
         font-size: 2.4rem;
         line-height: 1.2;
+    }
+    @media (max-width: 35em) {
+        width: 100%;
+        p{
+            width: 100%;
+            margin-top: 0rem;
+        }
     }
 `;
 
 const LeftSection = ({title, text, picture}) => (
     <StyledSection>
-        <StyledImg>
-            <img src={picture} />
-        </StyledImg>
-        <StyledContent>
-            <h1> {title} </h1>
-            <p> {text} </p>
-        </StyledContent>
+        <h1> {title} </h1>
+        <Content>
+            <StyledImg>
+                <img src={picture} />
+            </StyledImg>
+            <StyledContent>
+                <p> {text} </p>
+            </StyledContent>
+        </Content>
     </StyledSection>
 );
 
