@@ -16,19 +16,37 @@ const background=require("../images/about/background.png")
 /*----------------------------- Variables --------------------------*/
 
 var MembersPics =[
-    {picture: require("../images/about/team/amine.png")},
-    {picture: require("../images/about/team/manal.png")},
-    {picture: require("../images/about/team/raouf.png")},
-    {picture: require("../images/about/team/abir.png")},
-    {picture: require("../images/about/team/soumia.png")},
-    {picture: require("../images/about/team/ismail.png")},
-    {picture: require("../images/about/team/batoul.png")},
-    {picture: require("../images/about/team/djamal.png")},
-    {picture: require("../images/about/team/masci.png")}
+    {picture: require("../images/about/team/amine.png"), 
+        name: "Amine ATHMANI", role:"GDG Manager", email:"fm_athmani@esi.dz" },
+    {picture: require("../images/about/team/afaf.png"), 
+        name: "Afaf KELAI", role:"WTM Embassador", email:"ea_kelai@esi.dz" },
+    {picture: require("../images/about/team/manal.png"), 
+        name: "Manal SLAMANI", role:"WTM Organizer", email:"em_slamani@esi.dz" },
+    {picture: require("../images/about/team/batoul.png"), 
+        name: "El-Batoul MAZIGHI", role:"Com Department Lead", email:"fe_mazighi@esi.dz" },
+    {picture: require("../images/about/team/ismail.png"), 
+        name: "Ismail ALEM", role:"Com Department Lead", email:"alem.ismail.99@gmail.com" },
+    {picture: require("../images/about/team/raouf.png"), 
+        name: "Raouf GATTAL", role:"Design Department Lead", email:"fa_gattal@esi.dz" },
+    {picture: require("../images/about/team/hadjer.png"), 
+        name: "Hadjer BenMEZIANE", role:"Dev Department Lead", email:"fh_benmeziane@esi.dz" },
+    {picture: require("../images/about/team/meyssa.png"), 
+        name: "Meyssa ZOUAMBI", role:"Dev Department Lead", email:"fm_zouambi@esi.dz" },
+    {picture: require("../images/about/team/djamal.png"), 
+        name: "Djamal BELILET", role:"Dev Department Lead", email:"fd_belilet@esi.dz" },
+    {picture: require("../images/about/team/abir.png"), 
+        name: "Abir HAMMACHE", role:"Logistic Department Lead", email:"fa_hammache@esi.dz" },
+    {picture: require("../images/about/team/masci.png"), 
+        name: "Masci HAMMACHE", role:"Logistic Department Lead", email:"em_slamani@esi.dz" },
+    {picture: require("../images/about/team/soumia.png"), 
+        name: "Soumia SAADOUNE", role:"Marketing Department Lead", email:"es_saadoun@esi.dz" },
 ];
 
 const Members = MembersPics.map((member) =>
-    <MemberCard key={member.picture} picture={member.picture}></MemberCard>
+    <MemberCard key={member.picture} picture={member.picture}
+        name={member.name}
+        role={member.role}
+        email={member.email}></MemberCard>
 );
 
 

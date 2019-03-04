@@ -1,10 +1,11 @@
-import React, {Component} from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 import ReactCardFlip from 'react-card-flip';
-import { dark, darkBlue } from '../../styles/colors';
+import { dark, darkBlue, blue } from '../../styles/colors';
 
-/*const FrontComponent = styled.div`
+
+const FrontComponent = styled.div`
     width: 22rem;
     height: 25rem;
     background: white;
@@ -12,6 +13,9 @@ import { dark, darkBlue } from '../../styles/colors';
     padding: 0;
     border-radius: 8px;
     margin: 1rem;
+    background-image: url(${props=>props.picture});
+    background-size: 102%;
+    background-repeat: no-repeat;
     img{
         width: 100%;
         height: 100%;
@@ -45,9 +49,29 @@ const BackComponent = styled(FrontComponent)`
     }
 `;
 
+const FrontButton = styled.button`
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 20rem;
+    background: ${blue};
+    border: none;
+    color: white; 
+    border-radius: 0.7rem;
+    font-size: 1.4rem;
+    padding: 0.8rem;
+    :hover{
+        cursor: pointer;  
+        box-shadow: 5px 5px 5px -5px #333;
+    }
+`;
+
+const BackButton = styled(FrontButton)`
+    margin-top: 3rem;
+`;
+
 class MemberCard extends React.Component {
-    constructor() {
-      super();
+    constructor(props) {
+      super(props);
       this.state = {
         isFlipped: false
       };
@@ -62,25 +86,24 @@ class MemberCard extends React.Component {
     render() {
       return (
         <ReactCardFlip isFlipped={this.state.isFlipped}>
-          <FrontComponent key="front">
-            <img src={require("../../images/about/team/amine.png")} />
-            <button onClick={this.handleClick}>Click to flip</button>
+          <FrontComponent picture={this.props.picture} key="front">
+            <FrontButton onClick={this.handleClick}> Contact </FrontButton>
           </FrontComponent>
    
           <BackComponent key="back">
-            <h1> Amine Athmani </h1>
-            <h2> GDG Manager </h2>
-            <p> fm_athmani@esi.dz </p>
-            <button onClick={this.handleClick}>Click to flip</button>
+            <h1> {this.props.name} </h1>
+            <h2> {this.props.role} </h2>
+            <p> {this.props.email} </p>
+            <BackButton onClick={this.handleClick}> Done </BackButton>
           </BackComponent>
         </ReactCardFlip>
       )
     }
 }
-export default MemberCard*/
+export default MemberCard
 
 
-const StyledCard = styled.div`
+/*const StyledCard = styled.div`
     width: 22rem;
     height: 25rem;
     background: white;
@@ -104,4 +127,4 @@ const MemberCard = ({picture}) => {
     )
 }
 
-export default MemberCard
+export default MemberCard*/

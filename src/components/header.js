@@ -3,10 +3,25 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { dark, darkBlue, darkGreen } from '../styles/colors';
 
+const MenuIcon = styled.img`
+    display: none;
+    width: 3rem;
+    height: 2.5rem;
+    margin-top: 0.5rem !important;
+    margin-right: 3rem !important;
+    :hover{
+        cursor: pointer;
+    }
+    @media (max-width: 35em) {
+		display: block;
+    }
+`;
+
+
 const StyledHeader = styled.header`
     background: ${dark};
-    font-size: 1.6rem;
     width: 100%;
+    font-size: 1.6rem;
     margin: 0;
     display: flex;
     position: fixed;
@@ -16,19 +31,27 @@ const StyledHeader = styled.header`
     * {
         margin: 0;
     }
+    @media (max-width: 35em) {
+        flex-direction: column;
+        justify-content: center;
+    }
 
     nav {
-        width: 79%;
         display: flex;
         flex-flow: row nowrap;
-        justify-content: start;
+        justify-content: flex-end;
         align-items: center;
+        @media (max-width: 35em) {
+            background: ${dark};
+            flex-direction: column;
+            justify-content: center;
+        }
     }
 
     .highlight {
-            color: black;
-            background-color: white
-        }
+        color: black;
+        background-color: white
+    }
 
     a {
         color: white;
@@ -55,9 +78,18 @@ const StyledHeader = styled.header`
 `;
 
 const StyledLogo = styled.div`
-    width: 66%;
-    margin: 0;
+    margin: 1.5rem 0rem;
     padding: 0;
+    display: flex;
+    justify-content: space-between;
+`;
+
+const StyledMenu = styled.div`
+    display: flex;
+    @media (max-width: 35em) {
+        flex-direction: column;
+        display: none;
+    }
 `;
 
 const LogoContainer = styled.div`
@@ -76,10 +108,14 @@ const StyledLogIn = styled.div`
     flex-flow: row nowrap;
     justify-content: start;
     background: ${darkGreen};
-    width: 20.5%;
-    padding: 1.5rem 2rem;
-    padding-right: 0;
+    padding: 1.5rem;
+    padding-right: 3rem;
     font-weight: bold;
+    @media (max-width: 35em) {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem 19rem;
+    }
 `;
 
 const LogIn = styled(Link)`
@@ -134,23 +170,38 @@ const Header = ({location}) => {
     console.log('alpha',location.pathname)
     return (
     <StyledHeader>
-        <nav>
-            <StyledLogo>
-                <LogoContainer>
-                    <img src={require("../images/iwd.png")} />
-                </LogoContainer>
-            </StyledLogo>
-            <Link className={location.pathname === "/" && 'active'} to="/"> Home </Link>
-            <Link className={location.pathname === "/about" && 'active'} to="/about"> About </Link>
-            <Link className={location.pathname === "/contact-us" && 'active'} to="/contact-us"> Contact us </Link>
-        </nav>
-        <StyledLogIn>
-            <LogIn className={location.pathname === "/agenda" && 'active'} to="/agenda"> Agenda </LogIn>
-            <StyledLink className={location.pathname === "/register" && 'highlight'} >
-                <SignIn to="/register"> Register</SignIn>
-            </StyledLink>
-        </StyledLogIn>
+        <StyledLogo>
+            <LogoContainer>
+                <img src={require("../images/iwd.png")} />
+            </LogoContainer>
+            <MenuIcon src={require("../images/menu-icon.png")} onClick={menuToggle}/>
+        </StyledLogo>
+        <StyledMenu>
+            <nav>
+                <Link className={location.pathname === "/" && 'active'} to="/"> Home </Link>
+                <Link className={location.pathname === "/about" && 'active'} to="/about"> About </Link>
+                <Link className={location.pathname === "/contact-us" && 'active'} to="/contact-us"> Contact us </Link>
+            </nav>
+            <StyledLogIn>
+                <LogIn className={location.pathname === "/agenda" && 'active'} to="/agenda"> Agenda </LogIn>
+                <StyledLink className={location.pathname === "/register" && 'highlight'} >
+                    <SignIn to="/register"> Register</SignIn>
+                </StyledLink>
+            </StyledLogIn>
+        </StyledMenu>
     </StyledHeader>
 );}
+
+
+var bool = false;
+function menuToggle(){
+	if(!bool) {
+        console.log("clicked");
+        bool = true;
+	}else{
+        console.log("Not clicked");
+		bool = false;
+	}
+}
 
 export default Header;
