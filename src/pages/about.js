@@ -18,6 +18,8 @@ const background=require("../images/about/background.png")
 var MembersPics =[
     {picture: require("../images/about/team/amine.png"), 
         name: "Amine ATHMANI", role:"GDG Manager", email:"fm_athmani@esi.dz" },
+    {picture: require("../images/about/team/amel.png"), 
+        name: "Amel AZZI", role:"GDG Manager", email:"ea_azzi@esi.dz" },
     {picture: require("../images/about/team/afaf.png"), 
         name: "Afaf KELAI", role:"WTM Embassador", email:"ea_kelai@esi.dz" },
     {picture: require("../images/about/team/manal.png"), 
@@ -40,6 +42,10 @@ var MembersPics =[
         name: "Masci HAMMACHE", role:"Logistic Department Lead", email:"em_slamani@esi.dz" },
     {picture: require("../images/about/team/soumia.png"), 
         name: "Soumia SAADOUNE", role:"Marketing Department Lead", email:"es_saadoun@esi.dz" },
+    {picture: require("../images/about/team/nadjib.png"), 
+        name: "Nadjib SOUAB", role:"HR Responsible", email:"fn_souab@esi.dz" },
+    {picture: require("../images/about/team/azzeddine.png"), 
+        name: "Azzeddine CHENINE", role:"HR Responsible", email:"fa_chenine@esi.dz" },
 ];
 
 const Members = MembersPics.map((member) =>
@@ -53,7 +59,7 @@ const Members = MembersPics.map((member) =>
 
 const About = ({location}) => (
 <Layout location={location}>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="About" keywords={[`gatsby`, `application`, `react`]} />
     <Head background={background} title="Women Techmakers Algiers" subtitle=""
         text="International Women’s Day (IWD) is marked on March 8th every year. 
         In different regions."/>

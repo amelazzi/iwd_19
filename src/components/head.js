@@ -11,6 +11,10 @@ const StyledHead = styled.div`
     background-position: bottom right;
     height: 61vh;
     padding : 14rem 4rem;
+    @media (max-width: 35em) {
+        height: 100vh;
+        padding : 8rem 4rem;
+    }
 `;
 
 const HeadContent = styled.div`
@@ -31,6 +35,17 @@ const HeadContent = styled.div`
         font-size: 2.6rem;
         line-height: 1.6;
     }
+    @media (max-width: 35em) {
+        h1{
+            width: 100%;
+            font-size: 5rem;
+        }
+        p{
+            width: 100%;
+            padding: 0 !important;
+            font-size: 2rem;
+        }
+    }
 `;
 
 const StyledLink = styled(Link)`
@@ -43,6 +58,9 @@ const StyledLink = styled(Link)`
     :hover{
         text-decoration: none;
         color: white;
+    }
+    @media (max-width: 35em) {
+       margin-left: 54%;
     }
 `;
 

@@ -16,11 +16,11 @@ const FrontComponent = styled.div`
     background-image: url(${props=>props.picture});
     background-size: 102%;
     background-repeat: no-repeat;
-    img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 8px;
+    :hover{
+      cursor: pointer;
+      box-shadow: 5px 5px 5px -5px #333,
+        0px 16px 24px 2px rgba(0, 0, 0, 0.14),
+        0px 6px 30px 5px rgba(0, 0, 0, 0.12);
     }
 `;
 
@@ -49,26 +49,6 @@ const BackComponent = styled(FrontComponent)`
     }
 `;
 
-const FrontButton = styled.button`
-    width: 80%;
-    margin-left: 10%;
-    margin-top: 20rem;
-    background: ${blue};
-    border: none;
-    color: white; 
-    border-radius: 0.7rem;
-    font-size: 1.4rem;
-    padding: 0.8rem;
-    :hover{
-        cursor: pointer;  
-        box-shadow: 5px 5px 5px -5px #333;
-    }
-`;
-
-const BackButton = styled(FrontButton)`
-    margin-top: 3rem;
-`;
-
 class MemberCard extends React.Component {
     constructor(props) {
       super(props);
@@ -86,15 +66,13 @@ class MemberCard extends React.Component {
     render() {
       return (
         <ReactCardFlip isFlipped={this.state.isFlipped}>
-          <FrontComponent picture={this.props.picture} key="front">
-            <FrontButton onClick={this.handleClick}> Contact </FrontButton>
+          <FrontComponent picture={this.props.picture} onClick={this.handleClick} key="front">
           </FrontComponent>
    
-          <BackComponent key="back">
+          <BackComponent key="back" onClick={this.handleClick}>
             <h1> {this.props.name} </h1>
             <h2> {this.props.role} </h2>
             <p> {this.props.email} </p>
-            <BackButton onClick={this.handleClick}> Done </BackButton>
           </BackComponent>
         </ReactCardFlip>
       )

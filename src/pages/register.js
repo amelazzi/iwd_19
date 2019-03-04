@@ -29,7 +29,7 @@ const StyledFrom = styled.div`
 
 const Register = ({location}) => (
     <Layout location={location}>
-        <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+        <SEO title="Register" keywords={[`gatsby`, `application`, `react`]} />
         <Head /> 
         <FormContainer>
             <StyledFrom >

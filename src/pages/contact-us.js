@@ -16,7 +16,7 @@ const background=require("../images/contact/background.png")
 
 const ContactUs = ({location}) => (
     <Layout location={location}>
-        <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+        <SEO title="Contact Us" keywords={[`gatsby`, `application`, `react`]} />
         <Head background={background} title="Contact Us" subtitle=""
             text="For any question regarding our event, reach us below"/>
         <Form/>
