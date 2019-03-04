@@ -10,6 +10,9 @@ const StyledFooter = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 35em) {
+        flex-direction: column;
+    }
 `;
 
 const IwdLogo = styled.div`
@@ -30,6 +33,9 @@ const Content = styled.div`
         color: white;
         font-size: 14px;
         margin-top: 8px;
+    }
+    @media (max-width: 35em) {
+        margin: 5rem 0rem;
     }
 `;
 

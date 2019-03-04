@@ -10,6 +10,10 @@ const FormContainer = styled.div`
     form{
         width: 100%;
     }
+    @media (max-width: 35em) {
+        padding: 0;
+        margin: 10rem 3rem;
+    }
 `;
 
 
@@ -18,6 +22,9 @@ const InfoContainer = styled.div`
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    @media (max-width: 35em) {
+        flex-direction: column;
+    }
 `;
 
 const Input = styled.input`
@@ -26,13 +33,17 @@ const Input = styled.input`
     border-radius: 3.2rem;
     padding: 0.8rem 1.6rem;
     font-size: 1.8rem;
-    margin: 0rem!important;
+    margin: 0rem !important;
 
     ::placeholder{
         font-size: 1.6rem;
     }
     :focus{
         outline: none;
+    }
+    @media (max-width: 35em) {
+        width: 75%;
+        margin-bottom: 1rem !important;
     }
 `;
 
@@ -49,6 +60,11 @@ const StyledTextArea = styled.textarea`
     }
     :focus{
         outline: none;
+    }
+    @media (max-width: 35em) {
+        width: 92%;
+        margin-top: 1rem;
+        margin-bottom: 1rem !important;
     }
 `;
 

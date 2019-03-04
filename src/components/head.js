@@ -60,7 +60,7 @@ const StyledLink = styled(Link)`
         color: white;
     }
     @media (max-width: 35em) {
-       margin-left: 54%;
+       margin-left: 25%;
     }
 `;
 
