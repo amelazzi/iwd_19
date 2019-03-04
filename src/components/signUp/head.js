@@ -12,6 +12,10 @@ const StyledHead = styled.div`
     background-position: bottom right;
     height: 62vh;
     padding : 14rem 4rem;
+    @media (max-width: 35em) {
+        height: 100vh;
+        padding : 8rem 4rem;
+    }
 `;
 
 const HeadContent = styled.div`
@@ -31,6 +35,17 @@ const HeadContent = styled.div`
         padding-bottom: 5rem;
         font-size: 2.6rem;
         line-height: 1.6;
+    }
+    @media (max-width: 35em) {
+        h1{
+            width: 100%;
+            font-size: 5rem;
+        }
+        p{
+            width: 60%;
+            padding: 0 !important;
+            font-size: 2rem;
+        }
     }
 `;
 

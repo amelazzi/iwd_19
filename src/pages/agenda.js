@@ -11,8 +11,8 @@ const background=require("../images/agenda/background.png")
 const Agenda = ({location}) => (
 <Layout location={location}>
     <SEO title="Agenda" keywords={[`gatsby`, `application`, `react`]} />
-    <Head background={background} title="Agenda / Speakers" subtitle=""
-        text="You want to see IWD Content?,check the Agenda and Speakers below."/>
+    <Head background={background} title="Agenda" subtitle=""
+        text="You want to see IWD Content?, check the Agenda below."/>
     <AgendaContent/>
 </Layout>
 ) 
