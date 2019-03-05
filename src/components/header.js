@@ -45,6 +45,7 @@ const StyledHeader = styled.header`
             background: ${dark};
             flex-direction: column;
             justify-content: center;
+            padding-bottom: 1.5rem;
         }
     }
 
@@ -88,7 +89,7 @@ const StyledMenu = styled.div`
     display: flex;
     @media (max-width: 35em) {
         flex-direction: column;
-        display: none;
+        display: block;
     }
 `;
 
@@ -122,6 +123,9 @@ const LogIn = styled(Link)`
     :after {
         background: white !important;
         bottom: 0.2rem  !important;
+    }
+    @media (max-width: 35em) {
+        bottom: 1rem;
     }
 `;
 

@@ -19,7 +19,7 @@ var MembersPics =[
     {picture: require("../images/about/team/amine.png"), 
         name: "Amine ATHMANI", role:"GDG Manager", email:"fm_athmani@esi.dz" },
     {picture: require("../images/about/team/amel.png"), 
-        name: "Amel AZZI", role:"GDG Manager", email:"ea_azzi@esi.dz" },
+        name: "Amel AZZI", role:"WTM Embassador", email:"ea_azzi@esi.dz" },
     {picture: require("../images/about/team/afaf.png"), 
         name: "Afaf KELAI", role:"WTM Embassador", email:"ea_kelai@esi.dz" },
     {picture: require("../images/about/team/manal.png"), 
