@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import ReactCardFlip from 'react-card-flip';
+
 import { dark, darkBlue, blue } from '../../styles/colors';
 
 
-const FrontComponent = styled.div`
+/*const FrontComponent = styled.div`
     width: 22rem;
     height: 25rem;
     background: white;
@@ -78,10 +78,10 @@ class MemberCard extends React.Component {
       )
     }
 }
-export default MemberCard
+export default MemberCard*/
 
 
-/*const StyledCard = styled.div`
+const StyledCard = styled.div`
     width: 22rem;
     height: 25rem;
     background: white;
@@ -105,4 +105,4 @@ const MemberCard = ({picture}) => {
     )
 }
 
-export default MemberCard*/
+export default MemberCard
