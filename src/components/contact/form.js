@@ -12,7 +12,7 @@ const FormContainer = styled.div`
     }
     @media (max-width: 35em) {
         padding: 0;
-        margin: 10rem 3rem;
+        margin: 4rem;
     }
 `;
 
@@ -24,6 +24,7 @@ const InfoContainer = styled.div`
     width: 100%;
     @media (max-width: 35em) {
         flex-direction: column;
+        width: 122%;
     }
 `;
 

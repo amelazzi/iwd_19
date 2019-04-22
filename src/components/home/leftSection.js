@@ -21,6 +21,7 @@ const StyledSection = styled.div`
     }
     @media (max-width: 35em) {
         flex-direction: column;
+        text-align: center;
         padding: 3rem;
         h1{
             width: 100%;

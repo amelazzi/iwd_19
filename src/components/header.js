@@ -3,18 +3,13 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { dark, darkBlue, darkGreen } from '../styles/colors';
 
-const MenuIcon = styled.img`
-    display: none;
-    width: 3rem;
-    height: 2.5rem;
-    margin-top: 0.5rem !important;
-    margin-right: 3rem !important;
-    :hover{
-        cursor: pointer;
-    }
-    @media (max-width: 35em) {
-		display: block;
-    }
+import { ModalProvider, BaseModalBackground } from "styled-react-modal"
+import FancyModalButton from '../components/modal'
+
+
+const FadingBackground = styled(BaseModalBackground)`
+  opacity: ${props => props.opacity};
+  transition: opacity ease 200ms;
 `;
 
 
@@ -25,35 +20,37 @@ const StyledHeader = styled.header`
     margin: 0;
     display: flex;
     position: fixed;
+    align-items: center;
     justify-content: space-between;
     box-shadow: 0 5px 5px -5px #333;
     z-index: 2;
     * {
         margin: 0;
     }
-    @media (max-width: 35em) {
-        flex-direction: column;
-        justify-content: center;
-    }
+
+`;
+
+const StyledLogo = styled.div`
+    margin: 1.5rem 0rem;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+`;
+
+const StyledMenu = styled.div`
+    display: flex;
 
     nav {
         display: flex;
         flex-flow: row nowrap;
         justify-content: flex-end;
         align-items: center;
-        @media (max-width: 35em) {
-            background: ${dark};
-            flex-direction: column;
-            justify-content: center;
-            padding-bottom: 1.5rem;
-        }
     }
 
     .highlight {
         color: black;
         background-color: white
     }
-
     a {
         color: white;
         padding: 1rem 2.5rem;
@@ -75,21 +72,10 @@ const StyledHeader = styled.header`
                 border-radius: 10px;
             }
         }
+        
     }
-`;
-
-const StyledLogo = styled.div`
-    margin: 1.5rem 0rem;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-`;
-
-const StyledMenu = styled.div`
-    display: flex;
     @media (max-width: 35em) {
-        flex-direction: column;
-        display: block;
+        display: none;
     }
 `;
 
@@ -135,10 +121,10 @@ const StyledLink = styled.div`
     border-radius: 8px;
 
     &:hover{
-    background: white;
-    a{
-        color:${dark};
-    }
+        background: white;
+        a{
+            color:${dark};
+        }
 
     }
 
@@ -178,8 +164,10 @@ const Header = ({location}) => {
             <LogoContainer>
                 <img src={require("../images/iwd.png")} />
             </LogoContainer>
-            <MenuIcon src={require("../images/menu-icon.png")} onClick={menuToggle}/>
         </StyledLogo>
+        <ModalProvider backgroundComponent={FadingBackground}>
+                <FancyModalButton />
+            </ModalProvider>
         <StyledMenu>
             <nav>
                 <Link className={location.pathname === "/" && 'active'} to="/"> Home </Link>
@@ -195,17 +183,5 @@ const Header = ({location}) => {
         </StyledMenu>
     </StyledHeader>
 );}
-
-
-var bool = false;
-function menuToggle(){
-	if(!bool) {
-        console.log("clicked");
-        bool = true;
-	}else{
-        console.log("Not clicked");
-		bool = false;
-	}
-}
 
 export default Header;
