@@ -11,15 +11,25 @@ const PinContianer = styled.div`
     }
 `;
 
-const AnyReactComponent = () => <PinContianer></PinContianer>;
+const StyledMarker = styled.div`
+  width: 16rem;
+  color: salmon;
+`;
+
+const AnyReactComponent = ({ text }) => <StyledMarker>
+    {text}
+    <PinContianer>
+      <img src={require("../../images/contact/maps-and-flags.png")} />
+    </PinContianer>
+</StyledMarker>;
 
 class Map extends Component {
   static defaultProps = {
     center: {
-      lat: 36.7050299,
-      lng: 3.1739156
+      lat: 36.791153,
+      lng: 3.247753
     },
-    zoom: 16
+    zoom: 16,
   };
  
   render() {
@@ -27,13 +37,14 @@ class Map extends Component {
       // Important! Always set the container height explicitly
       <div style={{ height: '63vh', width: '100%' }}>
         <GoogleMapReact
-          bootstrapURLKeys={{ key:"AIzaSyAAHuANKl0K054Li921ZL24ssweXJiDNFY"}}
+          bootstrapURLKeys={{ key:"AIzaSyAG_gujKn9NB11zD3MuiItmHu4lgUalwng"}}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
         >
           <AnyReactComponent
-            lat={36.7050299}
-            lng={3.1739156}
+            lat={36.791153}
+            lng={3.247753}
+            text="Centre Culturel Ali Maachi"
           />
         </GoogleMapReact>
       </div>

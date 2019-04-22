@@ -37,7 +37,7 @@ const IndexPage = ({location}) => (
 <Layout location={location}>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <Head background={background} title="IWD’19 Algiers" subtitle="April, 27th 2019"
-        text="Higher National School of Computer Science - ESI ex INI -"/>
+        text="Centre Culturel Ali Maachi - Bordj El Bahri -"/>
     <RightSection picture={require("../images/home/iwd.png")}
         title="What is International Women Day?"
         text="International Women’s Day 'IWD' is marked on March 8th every year. 

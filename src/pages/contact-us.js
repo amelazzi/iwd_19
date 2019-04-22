@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 
 import Head from "../components/head"
 import Form from '../components/contact/form'
+import Map from "../components/contact/map"
 
 const background=require("../images/contact/background.png")
 
@@ -15,6 +16,7 @@ const ContactUs = ({location}) => (
         <Head background={background} title="Contact Us" subtitle=""
             text="For any question regarding our event, reach us below"/>
         <Form/>
+        <Map/>
     </Layout>
 ) 
 
