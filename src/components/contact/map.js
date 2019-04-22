@@ -19,7 +19,7 @@ const StyledMarker = styled.div`
 const AnyReactComponent = ({ text }) => <StyledMarker>
     {text}
     <PinContianer>
-      <img src={require("../../images/contact/maps-and-flags.png")} />
+      <img src={require("../../images/contact/maps-and-flags.png")} alt="pin" />
     </PinContianer>
 </StyledMarker>;
 

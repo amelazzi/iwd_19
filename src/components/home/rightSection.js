@@ -76,7 +76,7 @@ const LeftSection = ({title, text, picture}) => (
         <h1> {title} </h1>
         <Content>
             <StyledImg>
-                <img src={picture} />
+                <img src={picture} alt="cartoon" />
             </StyledImg>
             <StyledContent>
                 <p> {text} </p>

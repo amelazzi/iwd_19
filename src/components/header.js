@@ -162,7 +162,7 @@ const Header = ({location}) => {
     <StyledHeader>
         <StyledLogo>
             <LogoContainer>
-                <img src={require("../images/iwd.png")} />
+                <img src={require("../images/iwd.png")} alt="logo"/>
             </LogoContainer>
         </StyledLogo>
         <ModalProvider backgroundComponent={FadingBackground}>

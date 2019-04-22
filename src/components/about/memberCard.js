@@ -2,9 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 
 
-import { dark, darkBlue, blue } from '../../styles/colors';
-
-
 /*const FrontComponent = styled.div`
     width: 22rem;
     height: 25rem;
@@ -100,7 +97,7 @@ const StyledCard = styled.div`
 const MemberCard = ({picture}) => {
     return(
         <StyledCard>
-            <img src={picture} />
+            <img src={picture} alt="profile" />
         </StyledCard>
     )
 }

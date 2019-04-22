@@ -33,7 +33,12 @@ const Register = ({location}) => (
         <Head /> 
         <FormContainer>
             <StyledFrom >
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe7ax-7YK_dCjxx5vxnvbOmtvpZC1qh6tEQzZf5XHX6Ahz7Lw/viewform?embedded=true" width="100%" height="2300" frameborder="0" marginheight="0" marginwidth="0">Chargement en cours...</iframe>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe7ax-7YK_dCjxx5vxnvbOmtvpZC1qh6tEQzZf5XHX6Ahz7Lw/viewform?embedded=true" 
+                    width="100%" height="2300" frameborder="0" marginheight="0" marginwidth="0"
+                    title="IWD'19 Registration"    
+                >
+                    Loading...
+                </iframe>
             </StyledFrom>
         </FormContainer>
     </Layout>

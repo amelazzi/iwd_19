@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import ReactSVG from 'react-svg'
 
-import AgendaTable from './agendaTable'
 
 const agendaTable = require("./agenda.svg")
 

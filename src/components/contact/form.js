@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { dark, green, darkGreen } from '../../styles/colors';
-import { type } from 'os';
+import { dark, darkGreen } from '../../styles/colors'
 
 
 const FormContainer = styled.div`

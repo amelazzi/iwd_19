@@ -6,7 +6,6 @@ import styled from 'styled-components'
 import GlobalStyles from '../styles/globalStyles'
 
 import Header from "../components/header"
-import WtmBadge from "../components/wtmBadge"
 import Footer from "../components/footer"
 
 

@@ -80,7 +80,7 @@ const LeftSection = ({title, text, picture}) => (
                 <p> {text} </p>
             </StyledContent>
             <StyledImg>
-                <img src={picture} />
+                <img src={picture} alt="cartoon" />
             </StyledImg>
         </Content>
     </StyledSection>

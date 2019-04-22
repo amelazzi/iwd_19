@@ -17,7 +17,7 @@ const StyledCard = styled.div`
 const Card = ({picture}) => {
     return(
         <StyledCard>
-            <img src={picture} />
+            <img src={picture} alt="profil" />
         </StyledCard>
     )
 }

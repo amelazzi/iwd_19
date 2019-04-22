@@ -1,5 +1,4 @@
 import React from 'react'
-import {Link} from 'gatsby'
 import styled from 'styled-components'
 import { dark } from '../styles/colors'
 
@@ -78,24 +77,25 @@ const Footer = () => {
     return(
         <StyledFooter>
             <IwdLogo>
-                <img src={require("../images/iwd_logo.png")} />
+                <img src={require("../images/iwd_logo.png")} alt="iwd logo" />
             </IwdLogo>
             <Content>
                 <SocialMedia>
                     <IconContainer target="_black" href="https://www.facebook.com/WomenTechmakersAlgiers/">
-                        <img src={require("../images/facebook.png")} />
+                        <img src={require("../images/facebook.png")} 
+                            alt="facebook"/>
                     </IconContainer>
                     <IconContainer target="_black" href="https://www.twitter.com/AlgiersWtm">
-                        <img src={require("../images/twitter.png")} />
+                        <img src={require("../images/twitter.png")} alt="twitter" />
                     </IconContainer>
                     <IconContainer target="_black" href="https://www.instagram.com/wtm_algiers/">
-                        <img src={require("../images/instagram.png")} />
+                        <img src={require("../images/instagram.png")} alt="instagram" />
                     </IconContainer>
                 </SocialMedia>
                 <small> Copyrights &copy; 2019 All rights reserved </small>
             </Content>
             <WtmLogo>
-                <img src={require("../images/wtm_logo.png")} />
+                <img src={require("../images/wtm_logo.png")} alt="wtm logo" />
             </WtmLogo>
         </StyledFooter>
     )
